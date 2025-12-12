@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Registration Form</title>
+    </head>
+    <body>
+        <p>Registration Form <br>by Sola, Vincent C.<br>IT241</p>
+        <form>
+
+            <label>Full Name</label>
+            <input 
+                type="text" 
+                name="full_name" 
+                placeholder="Required, at least 3 characters" 
+                required 
+                minlength="3"
+            /><br/>
+
+            <label>Email Address</label>
+            <input 
+                type="email" 
+                name="email" 
+                placeholder="Required, must be a valid email" 
+                required
+            /><br/>        
+
+            <label>Password</label>
+            <input 
+                type="password" 
+                name="password" 
+                placeholder="Required, at least 8 characters, 1 number, 1 special character" 
+                required 
+                minlength="8" 
+                pattern="^(?=.*[0-9])(?=.*[\W_]).{8,}$"
+            /><br/>
+
+            <label>Confirm Password</label>
+            <input 
+                type="password" 
+                name="confirm_password" 
+                placeholder="Confirm Password" 
+                required
+            /><br/>
+
+            <label>Gender</label><br/>
+            <input type="radio" name="gender" value="male" required> Male
+            <input type="radio" name="gender" value="female" required> Female<br/>
+
+            <label>Date of Birth</label>
+            <input 
+                type="date" 
+                name="birthday" 
+                required
+            /><br/>
+
+            <label>Country</label>
+            <select name="country" required>
+                <option value="">Select Country</option>
+                <option value="Philippines">Philippines</option>
+                <option value="Canada">Canada</option>
+                <option value="UK">UK</option>
+                <option value="Australia">Australia</option>
+            </select><br/>
+
+            <label>Terms & Conditions</label>
+            <input type="checkbox" name="terms" required/> I agree to the <a href="terms.html" target="_blank">Terms & Conditions</a> <br/>
+
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
